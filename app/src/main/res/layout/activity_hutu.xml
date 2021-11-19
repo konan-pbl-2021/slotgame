@@ -10,7 +10,7 @@
         android:id="@+id/textView2"
         android:layout_width="195dp"
         android:layout_height="64dp"
-        android:text="ふつうモード"
+        android:text="Intermediate"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/hutustart"
         app:layout_constraintEnd_toEndOf="parent"
