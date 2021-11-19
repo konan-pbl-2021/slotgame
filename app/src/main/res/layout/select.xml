@@ -20,19 +20,6 @@
         app:layout_constraintVertical_bias="0.039" />
 
     <Button
-        android:id="@+id/tutorial"
-        android:layout_width="150dp"
-        android:layout_height="120dp"
-        android:text="チュートリアル"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/select1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nanido"
-        app:layout_constraintVertical_bias="0.767" />
-
-    <Button
         android:id="@+id/select1"
         android:layout_width="150dp"
         android:layout_height="120dp"
@@ -40,10 +27,10 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/select2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nanido"
-        app:layout_constraintVertical_bias="0.873" />
+        app:layout_constraintVertical_bias="0.426" />
 
     <Button
         android:id="@+id/select2"
@@ -56,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nanido"
-        app:layout_constraintVertical_bias="0.948" />
+        app:layout_constraintVertical_bias="0.782" />
 
     <Button
         android:id="@+id/select3"
@@ -69,5 +56,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nanido"
-        app:layout_constraintVertical_bias="0.97" />
+        app:layout_constraintVertical_bias="0.779" />
 </androidx.constraintlayout.widget.ConstraintLayout>
