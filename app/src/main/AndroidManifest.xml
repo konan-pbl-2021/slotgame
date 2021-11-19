@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".hiro"></activity>
+        <activity android:name=".Battle3"></activity>
+        <activity android:name=".hiro" />
         <activity android:name=".muzukashi" />
         <activity android:name=".hutu" />
         <activity android:name=".kantan" />
