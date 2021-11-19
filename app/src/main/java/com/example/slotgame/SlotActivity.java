@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class slot extends AppCompatActivity {
+public class SlotActivity extends AppCompatActivity {
 
     private static int i = 0; int j = 0; int k = 0;
     Timer timer =  null;
@@ -34,11 +34,11 @@ public class slot extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(timer == null){
-                timer = new Timer();}
+                    timer = new Timer();}
                 else{
-                timer = null;
-                timer = new Timer();}
-                textAnimation(textView, 0, 10, 70, 10); // i を１増やす
+                    timer = null;
+                    timer = new Timer();}
+                    textAnimation(textView, 0, 10, 70, 10); // i を１増やす
 
             }
 
