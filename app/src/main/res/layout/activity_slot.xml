@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_slot">
+
+    <TextView
+        android:id="@+id/slotroll1"
+        android:layout_width="57dp"
+        android:layout_height="26dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <Button
+        android:id="@+id/slotbutton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="和田暖哉"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slotroll1"
+        app:layout_constraintVertical_bias="0.795" />
+
+    <Button
+        android:id="@+id/stopbutton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slotroll1"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <TextView
+        android:id="@+id/slotroll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textview02"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toEndOf="@+id/slotroll1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <Button
+        android:id="@+id/stopbutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toEndOf="@+id/stopbutton1"
+        app:layout_constraintTop_toBottomOf="@+id/slotroll2"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <Button
+        android:id="@+id/slotbutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="和田暖哉２"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toEndOf="@+id/slotbutton1"
+        app:layout_constraintTop_toBottomOf="@+id/stopbutton2"
+        app:layout_constraintVertical_bias="0.537" />
+
+    <Button
+        android:id="@+id/slotbutton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="和田暖哉３"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toEndOf="@+id/slotbutton2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.907" />
+
+    <TextView
+        android:id="@+id/slotroll3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="textview3"
+        app:layout_constraintBottom_toTopOf="@+id/slotbutton3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toEndOf="@+id/slotroll2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.539" />
+
+    <Button
+        android:id="@+id/stopbutton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop3"
+        app:layout_constraintBottom_toTopOf="@+id/slotbutton3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toEndOf="@+id/stopbutton2"
+        app:layout_constraintTop_toBottomOf="@+id/slotroll3"
+        app:layout_constraintVertical_bias="0.72" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
