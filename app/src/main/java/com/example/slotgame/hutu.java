@@ -16,7 +16,7 @@ public class hutu extends AppCompatActivity {
         Button hutustart1Button = (Button)findViewById(R.id.hutustart);
         hutustart1Button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(hutu.this, hiro.class);
+                Intent intent = new Intent(hutu.this, Slot2.class);
                 startActivity(intent);
             }
         });
