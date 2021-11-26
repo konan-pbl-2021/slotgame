@@ -15,7 +15,7 @@ package com.example.slotgame;
 
 public class SlotActivity<b> extends AppCompatActivity {
 
-    private static int i = 0; int j = 0; int k = 0; int l = -1;
+    private static int i = 0; int j = 0; int k = 0; int l = 0;
     private static int tmpi = 0, tmpj = 0, tmpk = 0;
     private static int a; int b; int c;
     Timer timer =  null;
@@ -295,8 +295,8 @@ public class SlotActivity<b> extends AppCompatActivity {
         textView4.setText(String.valueOf(l));
         if ((a == b) && (b == c) && (a == c)) {
             l++;
-            a=-1;
-            i=-1;
+            a=0;
+            i=0;
             j=-2;
             k=-3;
             tmpi=-1;
