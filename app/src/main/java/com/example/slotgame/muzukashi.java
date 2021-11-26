@@ -16,7 +16,7 @@ public class muzukashi extends AppCompatActivity {
         Button muzukashistartButton = (Button)findViewById(R.id.muzukashistart);
         muzukashistartButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(muzukashi.this, hiro.class);
+                Intent intent = new Intent(muzukashi.this, SlotActivity.class);
                 startActivity(intent);
             }
         });
