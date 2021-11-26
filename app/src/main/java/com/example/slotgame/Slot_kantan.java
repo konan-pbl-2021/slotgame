@@ -2,6 +2,7 @@ package com.example.slotgame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -14,7 +15,9 @@ import java.util.TimerTask;
 
 public class Slot_kantan extends AppCompatActivity {
 
-    private static int i = 0; int j = 0; int k = 0;
+    private static int i = 0; int j = 0; int k = 0; int l = -1;
+    private static int tmpi = 0, tmpj = 0, tmpk = 0;
+    private static int a; int b; int c;
     Timer timer =  null;
     Timer timer2 = null;
     Timer timer3 = null;
@@ -24,6 +27,11 @@ public class Slot_kantan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slot_kantan);
+
+
+
+
+
 
         //左のリール
         final TextView textView = (TextView) findViewById(R.id.slotroll1);
@@ -38,7 +46,8 @@ public class Slot_kantan extends AppCompatActivity {
                 else{
                     timer = null;
                     timer = new Timer();}
-                textAnimation(textView, 0, 10, 70, 10); // i を１増やす
+                textAnimation(textView, 0, 10, 70, 1000); // i を１増やす
+//                textAnimation(textView, 0, 10, 500, 30);//テスト用
 
             }
 
@@ -48,10 +57,13 @@ public class Slot_kantan extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 timer.cancel();
-
+                i = tmpi;
+                a = i;
+                countcheck();
             }
 
         });
+
 
 
         //真ん中のリール
@@ -68,7 +80,8 @@ public class Slot_kantan extends AppCompatActivity {
                     timer2 = null;
                     timer2 = new Timer();}
 
-                textAnimation2(textView2, 0, 10, 100, 10); // i を１増やす
+                textAnimation2(textView2, 0, 10, 100, 1000); // i を１増やす
+//                textAnimation2(textView2, 0, 10, 500, 30);
 
             }
 
@@ -78,10 +91,14 @@ public class Slot_kantan extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 timer2.cancel();
-
+                j = tmpj;
+                b = j;
+                countcheck();
             }
 
         });
+
+
 
 
         //右のリール
@@ -98,8 +115,8 @@ public class Slot_kantan extends AppCompatActivity {
                     timer3 = null;
                     timer3 = new Timer();}
 
-                textAnimation3(textView3, 0, 10, 90, 10); // i を１増やす
-
+//                textAnimation3(textView3, 0, 10, 90, 10); // i を１増やす
+                textAnimation3(textView3, 0, 10, 500, 1000);
             }
 
         });
@@ -108,13 +125,24 @@ public class Slot_kantan extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 timer3.cancel();
-
+                k = tmpk;
+                c = k;
+                countcheck();
             }
 
         });
 
 
+
+        TextView textView4 = (TextView) findViewById(R.id.count);
+        textView4.setText(String.valueOf(l));
+        if((a == b) && (b == c) && (a == c)){
+            l++;
+        }
+        textView4.setText(String.valueOf(l));
+
     }
+
 
     //左のリールを動かす
     /**
@@ -134,17 +162,20 @@ public class Slot_kantan extends AppCompatActivity {
             @Override
             public void run() {
                 // handlerを使って処理をキューイングする
-                if (value < end) {
+                if (value < end-1) {
                     handler.post(new Runnable() {
                         public void run() {
                             textView.setText(String.valueOf(value));
                         }
 
                     });
-                    value += blockValue;
+//                    value += blockValue;
+                    value += 1;
+                    tmpi = value;
 
                 } else {
                     value = 0;
+                    tmpi = value;
                     handler.post(new Runnable() {
                         public void run() {
                             textView.setText(String.valueOf(value));
@@ -182,17 +213,20 @@ public class Slot_kantan extends AppCompatActivity {
             @Override
             public void run() {
                 // handlerを使って処理をキューイングする
-                if (value < end) {
+                if (value < end-1) {
                     handler.post(new Runnable() {
                         public void run() {
                             textView.setText(String.valueOf(value));
                         }
 
                     });
-                    value += blockValue;
+//                    value += blockValue;
+                    value += 1;
+                    tmpj = value;
 
                 } else {
                     value = 0;
+                    tmpj = value;
                     handler.post(new Runnable() {
                         public void run() {
                             textView.setText(String.valueOf(value));
@@ -224,17 +258,19 @@ public class Slot_kantan extends AppCompatActivity {
             @Override
             public void run() {
                 // handlerを使って処理をキューイングする
-                if (value < end) {
+                if (value < end-1) {
                     handler.post(new Runnable() {
                         public void run() {
                             textView.setText(String.valueOf(value));
                         }
 
                     });
-                    value += blockValue;
-
+//                    value += blockValue;
+                    value += 1;
+                    tmpk = value;
                 } else {
                     value = 0;
+                    tmpk = value;
                     handler.post(new Runnable() {
                         public void run() {
                             textView.setText(String.valueOf(value));
@@ -253,4 +289,29 @@ public class Slot_kantan extends AppCompatActivity {
             }
         },  0, period);
     }
+
+    private void countcheck() {
+        TextView textView4 = (TextView) findViewById(R.id.count);
+        textView4.setText(String.valueOf(l));
+        if ((a == b) && (b == c) && (a == c)) {
+            l++;
+            a=-1;
+            i=-1;
+            j=-2;
+            k=-3;
+            tmpi=-1;
+            b=-2;
+            tmpj=-2;
+            c=-3;
+            tmpk=-3;
+            if(l == 3){
+                Intent intent = new Intent(Slot_kantan.this,win.class);
+                startActivity(intent);
+
+
+            }
+        }
+        textView4.setText(String.valueOf(l));
+    }
+
 }

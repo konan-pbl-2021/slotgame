@@ -16,7 +16,7 @@ public class kantan extends AppCompatActivity {
         Button kantanstartButton = (Button)findViewById(R.id.kantanstart);
         kantanstartButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(kantan.this, hiro.class);
+                Intent intent = new Intent(kantan.this, Slot_kantan.class);
                 startActivity(intent);
             }
         });
