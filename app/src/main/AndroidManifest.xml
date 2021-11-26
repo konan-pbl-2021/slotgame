@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Slot_kantan"></activity>
         <activity android:name=".Slot2" />
+        <activity android:name=".win" />
         <activity android:name=".Battle3" />
         <activity android:name=".hiro" />
         <activity android:name=".muzukashi" />
