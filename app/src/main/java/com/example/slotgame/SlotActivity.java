@@ -2,6 +2,7 @@ package com.example.slotgame;
 
         import androidx.appcompat.app.AppCompatActivity;
 
+        import android.content.Intent;
         import android.os.Bundle;
         import android.os.Handler;
         import android.os.Looper;
@@ -294,7 +295,23 @@ public class SlotActivity<b> extends AppCompatActivity {
         textView4.setText(String.valueOf(l));
         if ((a == b) && (b == c) && (a == c)) {
             l++;
+            a=-1;
+            i=-1;
+            j=-2;
+            k=-3;
+            tmpi=-1;
+            b=-2;
+            tmpj=-2;
+            c=-3;
+            tmpk=-3;
+            if(l == 3){
+                Intent intent = new Intent(SlotActivity.this,win.class);
+                startActivity(intent);
+
+
+            }
         }
         textView4.setText(String.valueOf(l));
     }
+
 }
