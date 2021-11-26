@@ -1,20 +1,21 @@
 package com.example.slotgame;
 
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+        import android.os.Bundle;
+        import android.os.Handler;
+        import android.os.Looper;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.TextView;
 
-import java.util.Timer;
-import java.util.TimerTask;
+        import java.util.Timer;
+        import java.util.TimerTask;
 
-public class SlotActivity extends AppCompatActivity {
+public class SlotActivity<b> extends AppCompatActivity {
 
-    private static int i = 0; int j = 0; int k = 0;
+    private static int i = 0; int j = 0; int k = 0; int l = 0;
+    private static int a; int b; int c;
     Timer timer =  null;
     Timer timer2 = null;
     Timer timer3 = null;
@@ -24,6 +25,12 @@ public class SlotActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slot);
+
+        TextView textView4 = (TextView) findViewById(R.id.count);
+        textView4.setText(String.valueOf(l));
+
+
+
 
         //左のリール
         final TextView textView = (TextView) findViewById(R.id.slotroll1);
@@ -38,7 +45,7 @@ public class SlotActivity extends AppCompatActivity {
                 else{
                     timer = null;
                     timer = new Timer();}
-                    textAnimation(textView, 0, 10, 70, 10); // i を１増やす
+                textAnimation(textView, 0, 10, 70, 10); // i を１増やす
 
             }
 
@@ -52,6 +59,7 @@ public class SlotActivity extends AppCompatActivity {
             }
 
         });
+        a = i;
 
 
         //真ん中のリール
@@ -82,6 +90,8 @@ public class SlotActivity extends AppCompatActivity {
             }
 
         });
+        b = j;
+
 
 
         //右のリール
@@ -112,9 +122,14 @@ public class SlotActivity extends AppCompatActivity {
             }
 
         });
+        c = k;
 
+        if((a == b) && (b == c)){
+            l++;
+        }
 
     }
+
 
     //左のリールを動かす
     /**
@@ -160,7 +175,7 @@ public class SlotActivity extends AppCompatActivity {
 
 
 
-                }
+            }
         },  0, period);
     }
 
